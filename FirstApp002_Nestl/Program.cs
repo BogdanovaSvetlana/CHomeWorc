@@ -1,4 +1,5 @@
-﻿Console.WriteLine("Введите первое число!");
+﻿// Программа, которая на вход принимает три числа и выдает максимальное из этих чисел.
+Console.WriteLine("Введите первое число!");
 
 int a = Convert.ToInt32(Console.ReadLine());
 
@@ -21,5 +22,3 @@ if (c < min) min = c;
 
 Console.Write("max = ");
 Console.WriteLine(max);
-Console.Write("min = ");
-Console.WriteLine(min);
