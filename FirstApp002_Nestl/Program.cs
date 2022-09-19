@@ -16,9 +16,6 @@ int min = b;
 
 if (b > max) max = b;
 if (c > max) max = c;
-if (a < min) min = a;
-if (c < min) min = c;
-
 
 Console.Write("max = ");
 Console.WriteLine(max);
