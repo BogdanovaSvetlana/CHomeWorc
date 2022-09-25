@@ -6,7 +6,7 @@ double GetNumber(string name)
     return Convert.ToDouble(Console.ReadLine());
 }
 
-double GetNumChetv(double x1, double y1, double z1, double x2, double y2, double z2)
+double GetResult(double x1, double y1, double z1, double x2, double y2, double z2)
 {
     double a = (x2 - x1);
     double a1 = Math.Pow(a, 2);
@@ -31,4 +31,4 @@ double y2 = GetNumber("y2");
 double z1 = GetNumber("z1");
 double z2 = GetNumber("z2");
 
-Console.WriteLine(GetNumChetv(x1, y1, x2, y2, z1, z2));
+Console.WriteLine(GetResult(x1, y1, x2, y2, z1, z2));
