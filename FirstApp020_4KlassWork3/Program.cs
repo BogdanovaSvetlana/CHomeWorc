@@ -36,3 +36,24 @@ Console.WriteLine("Вторая цифра: " + GetDigitFromNumber(num,2));
 Console.WriteLine("Третья цифра: " + GetDigitFromNumber(num,3));
 Console.WriteLine("Четвертая цифра: " + GetDigitFromNumber(num,4));
 Console.WriteLine("Пятая цифра: " + GetDigitFromNumber(num,5));
+
+// int InputNumber() // Ручной ввод целого числа
+// {
+//     Console.Write("Введите число: ");
+//     return Convert.ToInt32(Console.ReadLine());
+// }
+
+// int GetDigCont(int Number) // Получение количества цифр в числе
+// {
+//     int DigCount = 0;
+//     //Number = Math.Abs(Number / 10);
+//     while(Number > 0)
+//     {
+//         Number = Math.Abs(Number / 10);
+//         DigCount++;
+//     }
+//     return DigCount;
+// }
+
+
+// Console.WriteLine("Количеств цифр в числе = " + GetDigCont(InputNumber()));
