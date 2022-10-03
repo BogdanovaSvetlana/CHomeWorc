@@ -51,4 +51,5 @@ PrintArray(array);
 double a = GetMax(array);
 double b = GetMin(array);
 double z = a - b;
+// double z = Math.Round(a - b);
 Console.Write($" -> {z}");
