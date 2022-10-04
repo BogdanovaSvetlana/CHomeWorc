@@ -99,6 +99,7 @@ int FindElements(int[] arr)
 
 // функция, принимает на вход массив и возвращает сумму 
 // элементов, стоящих на нечет.позициях
+int GetSumm1toA(int[] arr)
 {
     int summ = 0;
     for (int i = 0; i < arr.Length; i++)
@@ -123,4 +124,16 @@ double GetMax(double[] array)
         }
     }
     return max;
+}
+
+// Процедура переворачивания массива
+void SwapArrayTwo(int[] arr)
+{
+    int swap;
+    for (int i = 0; i < arr.Length/2; i++)
+    {              
+        swap = arr[arr.Length-i-1];
+        arr[arr.Length-i-1] = arr[i];
+       arr[i] = swap;
+    }
 }
