@@ -58,7 +58,7 @@ void getProizv(int[] arr)
 }
 
 // Преобразование массива в строку с заданным разделителем
-string StringArray(int[] array, string split) 
+string StringArray(int[] array) 
 {
     int lenght = array.Length; // получение длины массива
     string textarray = String.Empty; // обнуление строки
@@ -66,7 +66,7 @@ string StringArray(int[] array, string split)
     {
         textarray += array[i]; // добавление в строку значения текущего элемента массива
         if(i < lenght - 1) // проверка: является ли элемент последним (нужно ли добавить разделитель в строку)
-            textarray += split; // добавление разделителя между элементами в строку
+            textarray += ", "; // добавление разделителя между элементами в строку
     }
     return textarray; // возврат значения элементов массива в виде полученной строки
 }
