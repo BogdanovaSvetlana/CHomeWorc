@@ -31,7 +31,7 @@ int[] SwapArray(int[] arr)
     return tempArr;
 }
 
-// void[] SwapArrayTwo(int[] arr)
+// void SwapArrayTwo(int[] arr)
 // {
 //     int swap;
 //     for (int i = 0; i < arr.Length/2; i++)
@@ -42,9 +42,12 @@ int[] SwapArray(int[] arr)
 //     }
 // }
 
-int[] arr = new int[5];
+int[] array = new int[5];
 
-FillArray(arr);
-PrintArray(arr);
-
-PrintArray(SwapArray(arr));
+FillArray(array);
+PrintArray(array);
+// Console.WriteLine("Метод №1");
+PrintArray(SwapArray(array));
+// Console.WriteLine("Метод №2");
+// SwapArrayTwo(array);
+// PrintArray(array);
