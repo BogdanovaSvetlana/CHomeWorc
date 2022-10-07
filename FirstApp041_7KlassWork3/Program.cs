@@ -40,7 +40,7 @@ void PowEvenIndexElements(int[,] arr)
     {
         for(int j = 0; j < arr.GetLength(1); j++)
         {
-            if (i%2==0 && j%2==0)
+            if ((i+1) % 2 == 0 && (j+1) % 2 == 0)
             {
                 arr[i,j] = Convert.ToInt32(Math.Pow(arr[i,j], 2));
             }
@@ -121,7 +121,7 @@ PrintArray(array);
 //     {
 //         for(int j = 0; j < array.GetLength(1); j++)
 //         {
-//             if(i % 2 == 0 && j % 2 == 0)
+//             if((i+1) % 2 == 0 && (j+1) % 2 == 0)
 //             {
 //                 array[i, j] *= array[i, j];
 //             }
