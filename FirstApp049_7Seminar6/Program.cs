@@ -58,18 +58,18 @@ int m = InputNumber("Введите первую размерность масс
     min = InputNumber("Введите минимальное значение случайных чисел: "),
     max = InputNumber("Введите максимальное значение случайных чисел: ");
 if (min > max)
-    {
-        Console.WriteLine("Вы ввели недопустимое значение, введите другое число в следующий раз!");
-    }
+{
+    Console.WriteLine("Вы ввели недопустимое значение, введите другое число в следующий раз!");
+}
 else
-    {
-        int[,] array = new int[m, n];
+{
+    int[,] array = new int[m, n];
 
 
-        FillArray(array, min, max);
-        int[,] mult = getMult(array, x);
-        Console.WriteLine(StringArray2(array, ", "));
-        Console.WriteLine($"Результат умножения массива на число равен: ");
-        Console.WriteLine(StringArray2(mult, ", "));
-    }
+    FillArray(array, min, max);
+    int[,] mult = getMult(array, x);
+    Console.WriteLine(StringArray2(array, ", "));
+    Console.WriteLine($"Результат умножения массива на число равен: ");
+    Console.WriteLine(StringArray2(mult, ", "));
+}
 
