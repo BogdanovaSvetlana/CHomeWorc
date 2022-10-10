@@ -13,7 +13,7 @@ int InputNumber(string text)
 }
 
 // Преобразование массива в строку с заданным разделителем
-string StringArray2(int[,] array, string split) 
+string StringArray(int[,] array, string split) 
 {
     int lenght0 = array.GetLength(0); // получение длины массива
     int lenght1 = array.GetLength(1); // получение длины массива
@@ -53,7 +53,7 @@ int m = InputNumber("Введите первую размерность масс
 int[,] array = new int[m, n];
 
 FillArray(array, min, max);
-Console.WriteLine(StringArray2(array, ", "));
+Console.WriteLine(StringArray(array, ", "));
 if(a > m || b > n)
 {
     Console.WriteLine($"{a},{b} -> Такого числа в массиве нет!");
