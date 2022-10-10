@@ -40,7 +40,7 @@ void PrintArray(int[,] arr)
 
 int[,] InitializateArray(int m, int n)
 {
-     return new int[m,n];
+    return new int[m,n];
 }
 
 // КОД ОСНОВНОЙ ПРОГРАММЫ

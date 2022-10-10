@@ -7,7 +7,7 @@ int InputNumber(string text)
 }
 
 // Преобразование массива в строку с заданным разделителем
-string StringArray2(int[,] array, string split) 
+string StringArray(int[,] array, string split) 
 {
     int lenght0 = array.GetLength(0); // получение длины массива
     int lenght1 = array.GetLength(1); // получение длины массива
@@ -46,6 +46,7 @@ int[,] getMult(int[,] array1, int[,] array2)
         for(int j = 0; j <columns; j++)
         {
             mult[i,j] = array1[i, j] * array2[i, j];
+            Console.WriteLine(mult[i, j]);
         }
     }
     return mult;
@@ -77,9 +78,9 @@ else
         FillArray(array1, min, max);
         FillArray(array2, min, max);
         int[,] mult = getMult(array1, array2);
-        Console.WriteLine(StringArray2(array1, ", "));
-        Console.WriteLine(StringArray2(array2, ", "));
-        Console.WriteLine("Сумма двух двумерных массивов: ");
-        Console.WriteLine(StringArray2(mult, ", "));
+        Console.WriteLine(StringArray(array1, ", "));
+        Console.WriteLine(StringArray(array2, ", "));
+        Console.WriteLine("Произведение двух двумерных массивов равно: ");
+        Console.WriteLine(StringArray(mult, ", "));
     }
 }
