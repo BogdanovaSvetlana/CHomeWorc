@@ -14,15 +14,15 @@ int InputNumber(string text)
 
 void FillArray(int[,,] array)
 {
-    for(int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for(int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
             int k = 0;
             while (k < array.GetLength(2))
             {
                 int el = new Random().Next(10, 99);
-                if(FindElement(array, el)) continue;
+                if (FindElement(array, el)) continue;
                 array[i, j, k] = el;
                 k++;
             }
@@ -48,11 +48,11 @@ bool FindElement(int[,,] array, int el)
 
 void PrintArray(int[,,] array)
 {
-    for(int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for(int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            for(int k = 0; k < array.GetLength(2); k++)
+            for (int k = 0; k < array.GetLength(2); k++)
             {
                 Console.Write($"{array[i, j, k]} ({i}, {j}, {k})  ");
             }
@@ -74,5 +74,7 @@ else
     int[,,] array = new int[m, n, l];
 
     FillArray(array);
+    Console.WriteLine();
+    Console.WriteLine($"Массив размерom {m}*{n}*{l}");
     PrintArray(array);
 }
