@@ -38,15 +38,20 @@ void FillArray(int[,] array, int min, int max)
 
 int[,] getMult(int[,] array1, int[,] array2)
 {
-    int rows = array1.GetUpperBound(0) + 1;   
-    int columns = array1.Length / rows; 
-    int[,] mult = new int[rows,columns];
-    for(int i = 0; i < rows; i++)
+    int rows1 = array1.GetUpperBound(0) + 1;     
+    int columns1 = array1.Length / rows1; 
+
+    int rows2 = array2.GetUpperBound(0) + 1;
+    int columns2 = array2.Length / rows2; 
+    
+    int[,] mult = new int[rows1, columns2];
+    for(int i = 0; i < rows1; i++)
     {
-        for(int j = 0; j <columns; j++)
+        for(int j = 0; j <columns1; j++)
         {
-            mult[i,j] = array1[i, j] * array2[i, j];
-            Console.WriteLine(mult[i, j]);
+            mult[i, j] = 0;
+            for(int k = 0; k < rows2; k++)
+            mult[i, j] += array1[i, k] * array2[k, j];
         }
     }
     return mult;
@@ -57,10 +62,10 @@ int m = InputNumber("Введите первую размерность масс
 int n = InputNumber("Введите вторую размерность массива1: ");
 int a = InputNumber("Введите первую размерность массива2: ");
 int b = InputNumber("Введите вторую размерность массива2: ");
-if(a != m || b != n)
+if( m != b)
 {
     Console.WriteLine("Вы ввели недопустимый размер второго массива, ");
-    Console.WriteLine("Введите размер массива, равный первому в следующий раз!");
+    Console.WriteLine("Введите другой размер массива в следующий раз!");
 }
 else
 {
