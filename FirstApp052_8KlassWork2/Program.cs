@@ -1,5 +1,6 @@
 ﻿// Написать рекурсивный метод для деления одного числа на другое.
 //  Нужен остаток и результат деления
+int countSets = 0;
 int getNumber(int z)
 {
     Console.WriteLine($"Введите {z} -е целое число: ");
@@ -8,6 +9,7 @@ int getNumber(int z)
 
 int divisionRemainder(int x, int y)
 {
+    countSets++;
     if(x >= y)
     {
         x -= y;
@@ -41,4 +43,4 @@ int y = getNumber(b);
 Console.WriteLine(
     $"{x} / {y} = {divisionFull(x, y)} остаток от деления = {divisionRemainder(x, y)}"
 );
-Console.WriteLine();
+Console.WriteLine($"Количество проходов: {countSets}");
