@@ -24,4 +24,4 @@ Console.WriteLine("Введите N:");
 double n = GetNumberFromConsole();
 Console.WriteLine();
 int r = getSum((int) Math.Ceiling(m), (int) n);
-Console.Write($"N = {m}; M = {n} ->  {r}");
+Console.Write($"M = {m}; N = {n} ->  {r}");
